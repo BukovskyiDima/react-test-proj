@@ -1,10 +1,12 @@
-console.log('hello!');
-
 import React from "react";
 import ReactDOM from "react-dom";
+import { Movie } from './Movie';
+
 
 const Index = () => {
-    return <div>Hello React!</div>;
+    return (
+        <Movie/>
+    );
 };
 
 ReactDOM.render(
