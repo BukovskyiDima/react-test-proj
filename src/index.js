@@ -46,11 +46,11 @@ class Index extends React.Component{
 	    } else {
             return (
 			    <div className={"container"}>
-					    {
-						    result.map((item) => {
-							   return <Movie runtime={item.runtime} title={item.title} year={item.year}/>
-						    })
-					    }
+				    {
+					    result.map((item) => {
+					        return <Movie runtime={item.runtime} title={item.title} year={item.year}/>
+					    })
+				    }
 			    </div>
 		    )
 	    }
