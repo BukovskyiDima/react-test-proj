@@ -1,16 +1,18 @@
 import React from "react";
-import { Button } from '../Button';
+import { Button } from "../Button";
 
-export const Movie = (...props) => {
-
-	let text = 'note god';
-
-	return (
-	<div>
-			<img src={props.urlPoster} alt="image description"/>
-			<strong>{props.title}</strong>
-			<span>{props.year}</span>
-			<Button/>
-		</div>
-	);
-};
+export class Movie extends React.Component {
+	constructor(props) {
+		super(props)
+	}
+	render () {
+		return (
+			<li>
+				<strong>{this.props.title}</strong>
+				<span>{ this.props.runtime }</span>
+				<span>{this.props.year}</span>
+				<Button/>
+			</li>
+		);
+	}
+}
