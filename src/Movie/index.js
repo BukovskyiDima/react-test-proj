@@ -8,9 +8,9 @@ export class Movie extends React.Component {
 	render () {
 		return (
 			<li>
-				<strong>{this.props.title}</strong>
-				<span>{ this.props.runtime }</span>
-				<span>{this.props.year}</span>
+				<strong>{this.props.item.title}</strong>
+				<span>{ this.props.item.runtime }</span>
+				<span>{this.props.item.year}</span>
 				<Button/>
 			</li>
 		);

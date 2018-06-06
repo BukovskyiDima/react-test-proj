@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Movie } from "./Movie";
+import { TabHolder } from "./Tabs";
 
 
 class Index extends React.Component{
@@ -46,11 +46,8 @@ class Index extends React.Component{
 	    } else {
             return (
 			    <div className={"container"}>
-				    {
-					    result.map((item) => {
-					        return <Movie runtime={item.runtime} title={item.title} year={item.year}/>
-					    })
-				    }
+				    <TabHolder result={ result }/>
+
 			    </div>
 		    )
 	    }
