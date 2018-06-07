@@ -6,11 +6,19 @@ export class Movie extends React.Component {
 		super(props)
 	}
 	render () {
+		let item = this.props.item;
 		return (
-			<li>
-				<strong>{this.props.item.title}</strong>
-				<span>{ this.props.item.runtime }</span>
-				<span>{this.props.item.year}</span>
+			<li className="content-holder">
+				<div className="image-holder">
+					<img src={ item.urlPoster } alt="image description"/>
+				</div>
+				<div className="info-holder">
+					<strong>{ item.title } </strong>
+					<p>{ item.simplePlot }</p>
+					<span>{item.rating } </span>
+					<span>{item.year } </span>
+					<span>{ item.runtime } </span>
+				</div>
 				<Button/>
 			</li>
 		);

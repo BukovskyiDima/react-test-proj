@@ -22,6 +22,7 @@ class Index extends React.Component{
                         isLoaded: true,
                         result: result.data.movies
                     });
+                    console.log(result);
 				},
                 (error) => {
 			        this.setState({
