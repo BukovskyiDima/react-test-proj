@@ -20,8 +20,6 @@ a{
   justify-content: center;
 }
 
-/* ALL LOADERS */
-
 .loader{
   width: 100px;
   height: 100px;
@@ -29,8 +27,6 @@ a{
   position: relative;
   margin: 0 auto;
 }
-
-/* LOADER 1 */
 
 #loader-1:before, #loader-1:after{
   content: "";

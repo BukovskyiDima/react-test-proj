@@ -1,3 +1,7 @@
+@import "../Base Style/main.scss";
+
 .top-list {
-  list-style-type: none;
+	//@extend %listreset;
+
+	list-style-type: none;
 }

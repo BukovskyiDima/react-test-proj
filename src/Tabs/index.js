@@ -7,23 +7,9 @@ import styles from "./index.scss";
 export class TabHolder extends React.Component {
 	constructor (props) {
 		super(props);
-
-		this.state = {
-			count: 1
-		};
-
-		this.handleClick = this.handleClick.bind(this)
-	}
-
-	handleClick () {
-
-		// console.log(this.setState(prevState => (
-		// 	this.count + 1
-		// )));
 	}
 
 	render() {
-
 		let item = this.props.result;
 
 		let FilterList = item.sort(function(a,b) {
@@ -37,25 +23,22 @@ export class TabHolder extends React.Component {
 		});
 
 		return (
-			<Tabs>
-				<TabList>
-					<Tab>Топ 20 фильмов</Tab>
-					<Tab>Рейтинг по годам</Tab>
-					<Tab>Избранное</Tab>
+			<Tabs className={ styles['content'] }>
+				<TabList className={ styles['tab-holder'] }>
+					<Tab className={ styles['tab'] }>Топ 20</Tab>
+					<Tab className={ styles['tab'] }>Рейтинг по годам</Tab>
+					<Tab className={ styles['tab'] }>Избранное</Tab>
 				</TabList>
-
-				<TabPanel>
-					<h2>Any content 1</h2>
+				<TabPanel className={ styles['tab-content-holder'] }>
+					<h2 className={ styles['h2'] }>Топ 20 Фильмов</h2>
 					<TopList list={ FilterList }/>
-					{/*<button onClick={ this.handleClick }> Load more</button>*/}
-
 				</TabPanel>
-				<TabPanel>
-					<h2>Распределение лучших фильмов по годам</h2>
+				<TabPanel className={ styles['tab-content-holder'] }>
+					<h2 className={ styles['h2'] }>Распределение лучших фильмов по годам</h2>
 					<MyPie list={ FilterList }/>
 				</TabPanel>
-				<TabPanel>
-					<h2>Any content 3</h2>
+				<TabPanel className={ styles['tab-content-holder'] }>
+					<h2 className={ styles['h2'] }>Избранное</h2>
 				</TabPanel>
 			</Tabs>
 		)

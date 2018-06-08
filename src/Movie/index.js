@@ -13,12 +13,12 @@ export class Movie extends React.Component {
 				<div className="image-holder">
 					<img src={ item.urlPoster } alt="image description"/>
 				</div>
-				<div className="info-holder">
-					<strong>{ item.title }</strong>
+				<div className={ styles["info-holder"] }>
+					<strong className={ styles["name"] }>{ item.title }</strong>
 					<p>{ item.simplePlot }</p>
-					<span>{ item.rating }</span>
-					<span>{ item.year }</span>
-					<span>{ item.runtime }</span>
+					<span className={ styles["rating"] }>{ item.rating }</span>
+					<span className={ styles["year"] }>{ item.year }</span>
+					<span className={ styles["runtime"] }>{ item.runtime }</span>
 				</div>
 				<Button/>
 			</li>

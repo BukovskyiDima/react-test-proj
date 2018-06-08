@@ -1,1 +1,46 @@
 @import "../Base Style/main.scss";
+
+.content {
+	margin: 50px 0;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+}
+
+.tab-holder {
+	@extend %listreset;
+
+	display: flex;
+	border-bottom: 1px solid #000;
+}
+
+.tab {
+	@include animate (background);
+
+	background: #fff;
+
+
+	@include media ('>=tablet') {
+		width: 33.332%;
+		text-align: center;
+		padding: 15px 10px;
+		border-radius: 10px 10px 0 0;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover,
+	&[aria-selected='true'] {
+		background: #eee;
+	}
+}
+
+h2 {
+	text-align: center;
+}

@@ -24,7 +24,7 @@ export class MyPie extends React.Component {
 			result[a.year] = result[a.year] + 1 || 1;
 		});
 
-		let rundomColor = () => {
+		let randomColor = () => {
 			let letters = '0123456789ABCDEF';
 			let color = '#';
 			for (let i = 0; i < 6; i++) {
@@ -37,7 +37,7 @@ export class MyPie extends React.Component {
 			let obj = {};
 			obj.title = key;
 			obj.value = result[key];
-			obj.color = rundomColor();
+			obj.color = randomColor();
 
 			data.push(obj);
 		}
@@ -48,28 +48,27 @@ export class MyPie extends React.Component {
 			<div className={ styles["pie-holder"] }>
 				{
 					<PieChart
-						expandOnHover={true}
-						expandSize={15}
-						shrinkOnTouchEnd={false}
+						expandOnHover={ true }
+						expandSize={ 15 }
+						shrinkOnTouchEnd={ false }
 						strokeColor="#fff"
 						strokeLinejoin="round"
-						strokeWidth={1}
-						viewBoxSize={100}
-						data={data}
+						strokeWidth={ 1 }
+						viewBoxSize={ 100 }
+						data={ data }
 					/>
 				}
 				{
 					data.map(function(item){
 						return(
 							<div>
-								<span>{ item.title + ' год'} </span>
-								<span>{ item.value + ' шт'}</span>
+								<span>{ item.title + ' год' } </span>
+								<span>{ item.value + ' шт' }</span>
 							</div>
 						)
 					})
 				}
 			</div>
-
 		)
 	}
 }

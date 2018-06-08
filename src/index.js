@@ -19,17 +19,17 @@ class Index extends React.Component{
 			.then(result => result.json())
 			.then(
 				(result) => {
-                    this.setState({
-                        isLoaded: true,
-                        result: result.data.movies
-                    });
+					this.setState({
+						isLoaded: true,
+						result: result.data.movies
+					});
 				},
-                (error) => {
-			        this.setState({
-                        isLoaded: true,
-                        error
-                    })
-                }
+				(error) => {
+					this.setState({
+						isLoaded: true,
+						error
+					})
+				}
 			)
 	}
 
@@ -37,7 +37,7 @@ class Index extends React.Component{
 		const { error, isLoaded, result} = this.state;
 
 		if (error) {
-			return <div>Error: {error.message}</div>;
+			return <div>Error: { error.message }</div>;
 		} else if (!isLoaded) {
 			return(
 				<div className={ styles["container"] }>
@@ -50,7 +50,6 @@ class Index extends React.Component{
 			return (
 				<div className={ styles["container"] }>
 					<TabHolder result={ result }/>
-
 				</div>
 			)
 		}
