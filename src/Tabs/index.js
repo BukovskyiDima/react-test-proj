@@ -30,7 +30,7 @@ export class TabHolder extends React.Component {
 					<Tab className={ styles['tab'] }>Избранное</Tab>
 				</TabList>
 				<TabPanel className={ styles['tab-content-holder'] }>
-					<h2 className={ styles['h2'] }>Топ 20 Фильмов</h2>
+					<h2 className={ styles['h2'] }>20 лучших фильмов</h2>
 					<TopList list={ FilterList }/>
 				</TabPanel>
 				<TabPanel className={ styles['tab-content-holder'] }>

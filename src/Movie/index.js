@@ -9,8 +9,8 @@ export class Movie extends React.Component {
 	render () {
 		let item = this.props.item;
 		return (
-			<li className="content-holder">
-				<div className="image-holder">
+			<li className={ styles["content-holder"] }>
+				<div className={ styles["image-holder"] }>
 					<img src={ item.urlPoster } alt="image description"/>
 				</div>
 				<div className={ styles["info-holder"] }>

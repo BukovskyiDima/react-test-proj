@@ -1,1 +1,15 @@
 @import "../Base Style/main.scss";
+
+.content-holder {
+	@include media ('>=tablet') {
+		display: flex;
+		
+	}
+}
+
+.image-holder {
+	@include media ('>=tablet') {
+		min-width: 200px;
+		padding: 0 15px 0 0;
+	}
+}
