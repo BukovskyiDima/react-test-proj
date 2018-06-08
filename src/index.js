@@ -1,28 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { TabHolder } from "./Tabs";
+import styles from "./index.scss"
 
 
 class Index extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            error: null,
-            isLoaded: false,
-            result: []
-        };
-    }
+	constructor(props){
+		super(props);
+		this.state = {
+			error: null,
+			isLoaded: false,
+			result: []
+		};
+	}
 
 	componentDidMount() {
 		fetch("./server/db.json")
-            .then(result => result.json())
+			.then(result => result.json())
 			.then(
-			    (result) => {
+				(result) => {
                     this.setState({
                         isLoaded: true,
                         result: result.data.movies
                     });
-                    console.log(result);
 				},
                 (error) => {
 			        this.setState({
@@ -33,29 +33,31 @@ class Index extends React.Component{
 			)
 	}
 
-    render() {
-	    const { error, isLoaded, result} = this.state;
+	render() {
+		const { error, isLoaded, result} = this.state;
 
-	    if (error) {
-		    return <div>Error: {error.message}</div>;
-	    } else if (!isLoaded) {
-		    return(
-		    	<div>
-			        <img src="./src/img/loader.gif" alt="image description"/>
-		        </div>
-		    );
-	    } else {
-            return (
-			    <div className={"container"}>
-				    <TabHolder result={ result }/>
+		if (error) {
+			return <div>Error: {error.message}</div>;
+		} else if (!isLoaded) {
+			return(
+				<div className={ styles["container"] }>
+					<div className={ styles["three"] }>
+						<div className={ styles["loader"] } id={ styles["loader-1"] }></div>
+					</div>
+				</div>
+			);
+		} else {
+			return (
+				<div className={ styles["container"] }>
+					<TabHolder result={ result }/>
 
-			    </div>
-		    )
-	    }
-    }
+				</div>
+			)
+		}
+	}
 }
 
 ReactDOM.render(
-    <Index />,
-    document.getElementById("wrapper")
+	<Index />,
+	document.getElementById("wrapper")
 );

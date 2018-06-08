@@ -1,0 +1,7 @@
+@import "../Base Style/main.scss";
+
+.pie-holder {
+	@include media ('>=tablet') {
+		width: 50%;
+	}
+}

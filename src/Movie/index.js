@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "../Button";
+import styles from "./index.scss";
 
 export class Movie extends React.Component {
 	constructor(props) {
@@ -13,11 +14,11 @@ export class Movie extends React.Component {
 					<img src={ item.urlPoster } alt="image description"/>
 				</div>
 				<div className="info-holder">
-					<strong>{ item.title } </strong>
+					<strong>{ item.title }</strong>
 					<p>{ item.simplePlot }</p>
-					<span>{item.rating } </span>
-					<span>{item.year } </span>
-					<span>{ item.runtime } </span>
+					<span>{ item.rating }</span>
+					<span>{ item.year }</span>
+					<span>{ item.runtime }</span>
 				</div>
 				<Button/>
 			</li>

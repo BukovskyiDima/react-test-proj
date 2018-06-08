@@ -1,7 +1,8 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { TopList } from "../TopList";
-import { MyPie } from "../Pie"
+import { MyPie } from "../Pie";
+import styles from "./index.scss";
 
 export class TabHolder extends React.Component {
 	constructor (props) {
@@ -51,7 +52,7 @@ export class TabHolder extends React.Component {
 				</TabPanel>
 				<TabPanel>
 					<h2>Распределение лучших фильмов по годам</h2>
-					<MyPie list={ FilterList}/>
+					<MyPie list={ FilterList }/>
 				</TabPanel>
 				<TabPanel>
 					<h2>Any content 3</h2>

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.scss";
 
 export class Button extends React.Component {
 
@@ -19,7 +20,7 @@ export class Button extends React.Component {
 
 	render () {
 		return (
-			<button className={this.state.isToggle ? 'remove' : 'add'} onClick={this.toggleFavorite}>
+			<button className={this.state.isToggle ? styles['remove'] : styles['add']} onClick={this.toggleFavorite}>
 				{this.state.isToggle ? 'remove favorite' : 'Add favorite'}
 			</button>
 		)

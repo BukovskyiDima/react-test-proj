@@ -1,5 +1,6 @@
 import React from "react";
 import PieChart from "react-svg-piechart";
+import styles from "./index.scss";
 
 //
 
@@ -44,7 +45,7 @@ export class MyPie extends React.Component {
 		console.log(data);
 
 		return(
-			<div>
+			<div className={ styles["pie-holder"] }>
 				{
 					<PieChart
 						expandOnHover={true}
