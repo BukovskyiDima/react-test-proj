@@ -20,9 +20,11 @@ export class Button extends React.Component {
 
 	render () {
 		return (
-			<button className={ this.state.isToggle ? styles['remove'] : styles['add'] } onClick={this.toggleFavorite}>
-				{ this.state.isToggle ? 'remove favorite' : 'Add favorite' }
-			</button>
+			<div className={ styles["btn-holder"] }>
+				<button className={(this.state.isToggle ? styles['remove'] : styles['add']) + ' ' + styles["btn"] } onClick={this.toggleFavorite}>
+					{ this.state.isToggle ? 'remove favorite' : 'Add favorite' }
+				</button>
+			</div>
 		)
 	};
 }

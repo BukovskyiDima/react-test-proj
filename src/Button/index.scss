@@ -1,9 +1,26 @@
 @import "../Base Style/main.scss";
 
+.btn-holder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include media ('>=tablet') {
+		width: 300px;
+	}
+}
+
+.btn {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	display: inline-block;
+}
+
 .add {
-  //background-color: #000000;
+	color: green;
 }
 
 .remove {
-  //background-color: #f00;
+	color: red;
 }

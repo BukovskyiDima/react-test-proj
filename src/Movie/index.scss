@@ -1,9 +1,11 @@
 @import "../Base Style/main.scss";
 
 .content-holder {
+	margin-bottom: 15px;
+
 	@include media ('>=tablet') {
 		display: flex;
-		
+		margin-bottom: 20px;
 	}
 }
 
@@ -12,4 +14,16 @@
 		min-width: 200px;
 		padding: 0 15px 0 0;
 	}
+}
+
+.info-holder {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.name {
+	margin-bottom: 20px;
+	display: inline-block;
+	width: 100%;
 }

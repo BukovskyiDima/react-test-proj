@@ -17,8 +17,8 @@ export class Movie extends React.Component {
 					<strong className={ styles["name"] }>{ item.title }</strong>
 					<p>{ item.simplePlot }</p>
 					<span className={ styles["rating"] }>{ item.rating }</span>
-					<span className={ styles["year"] }>{ item.year }</span>
 					<span className={ styles["runtime"] }>{ item.runtime }</span>
+					<span className={ styles["year"] }>{ item.year }</span>
 				</div>
 				<Button/>
 			</li>
