@@ -20,7 +20,7 @@ export class Movie extends React.Component {
 					<span className={ styles["runtime"] }>{ item.runtime }</span>
 					<span className={ styles["year"] }>{ item.year }</span>
 				</div>
-				<Button/>
+				<Button ranking={ item.ranking }/>
 			</li>
 		);
 	}

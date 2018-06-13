@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { TopList } from "../TopList";
 import { MyPie } from "../Pie";
 import styles from "./index.scss";
+import { Favorite } from "../Favorite";
 
 export class TabHolder extends React.Component {
 	constructor (props) {
@@ -13,12 +14,10 @@ export class TabHolder extends React.Component {
 		let item = this.props.result;
 
 		let FilterList = item.sort(function(a,b) {
-			if (a.rating < b.rating) {
-				return 1;
-			} else if (a.rating > b.rating) {
+			if (a.ranking < b.ranking) {
 				return -1;
-			} else {
-				return 0;
+			} else if (a.ranking > b.ranking) {
+				return 1;
 			}
 		});
 
@@ -39,6 +38,7 @@ export class TabHolder extends React.Component {
 				</TabPanel>
 				<TabPanel className={ styles['tab-content-holder'] }>
 					<h2 className={ styles['h2'] }>Избранное</h2>
+					<Favorite list={ FilterList }/>
 				</TabPanel>
 			</Tabs>
 		)

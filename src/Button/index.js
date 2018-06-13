@@ -6,13 +6,16 @@ export class Button extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isToggle: false
+			isToggle: localStorage[this.props.ranking] || false
 		};
 
 		this.toggleFavorite = this.toggleFavorite.bind(this);
 	}
 
+
 	toggleFavorite() {
+		this.state.isToggle ? localStorage.removeItem(this.props.ranking) : localStorage.setItem(this.props.ranking, 'true');
+
 		this.setState(prevState => ({
 			isToggle: !prevState.isToggle
 		}));

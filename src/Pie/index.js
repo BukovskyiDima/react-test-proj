@@ -13,8 +13,6 @@ export class MyPie extends React.Component {
 		let data = [];
 		let result = {};
 
-		console.log(this.props.list);
-
 		let arr = [];
 		this.props.list.slice(0, 20).map((item) => {
 			return arr.push(item);
@@ -41,8 +39,6 @@ export class MyPie extends React.Component {
 
 			data.push(obj);
 		}
-
-		console.log(data);
 
 		return(
 			<div className={ styles["pie-holder"] }>
