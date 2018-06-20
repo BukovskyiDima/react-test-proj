@@ -5,6 +5,12 @@
 	padding-top: 0;
 }
 
+#react-tabs-1,
+#react-tabs-3,
+#react-tabs-5 {
+	padding-top: 0;
+}
+
 .content {
 	margin: 50px 0;
 	padding: 20px;
@@ -17,6 +23,7 @@
 
 	display: flex;
 	border-bottom: 1px solid #000;
+	margin-bottom: 20px;
 }
 
 .tab {
@@ -48,8 +55,4 @@
 
 h2 {
 	text-align: center;
-}
-
-.tab-content-holder {
-	padding-top: 20px;
 }

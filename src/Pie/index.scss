@@ -2,6 +2,28 @@
 
 .pie-holder {
 	@include media ('>=tablet') {
+		display: flex;
+	}
+}
+
+svg {
+	@include media ('>=tablet') {
 		width: 50%;
+	}
+}
+
+.top-movies {
+	@extend %listreset;
+
+	@include media ('>=tablet') {
+		display: flex;
+		flex-wrap: wrap;
+		width: 50%;
+	}
+
+	li {
+		@include media ('>=tablet') {
+			width: 50%;
+		}
 	}
 }

@@ -54,16 +54,16 @@ export class MyPie extends React.Component {
 						data={ data }
 					/>
 				}
-				{
-					data.map(function(item){
-						return(
-							<div>
-								<span>{ item.title + ' год' } </span>
-								<span>{ item.value + ' шт' }</span>
-							</div>
-						)
-					})
-				}
+				<ul className={ styles["top-movies"] }>
+					{data.map(function(item){
+							return(
+								<li>
+									<span>{ item.title + ' год' } </span>
+									<span>{ item.value + ' шт' }</span>
+								</li>
+							)
+						})}
+				</ul>
 			</div>
 		)
 	}

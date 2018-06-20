@@ -6,8 +6,7 @@ export class Favorite extends React.Component {
 		super(props);
 
 		this.state = {
-			storage: localStorage.length,
-			count: 0
+			storage: localStorage.length
 		};
 
 		this.AddNewList = this.AddNewList.bind(this);
